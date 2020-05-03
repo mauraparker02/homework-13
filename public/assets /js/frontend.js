@@ -4,9 +4,9 @@ $(function() {
         $("#add").on("click", function(event) {
         event.preventDefault();
 
-        var newBurger = $("#new-burger").val().trim();
+        var newOrder = $("#new-burger").val().trim();
 
-        $.ajax("/api/create/" + newBurger, {
+        $.ajax("/api/create/" + newOrder, {
             type: "POST"
         }).then(
             function() {
@@ -20,10 +20,10 @@ $(function() {
     $(".eat").on("click", function(event) {
         event.preventDefault();
         var id = $(this).attr("id");
-        var newDevour = $(this).attr("data-ate");
-        console.log(newDevour);
+        var newOrderFilled = $(this).attr("data-ate");
+        console.log(newOrderFilled);
     
-    $.ajax("/api/change/" + newDevour + "/" + id, {
+    $.ajax("/api/change/" + newOrderFilled + "/" + id, {
         type: "PUT"
       }).then(
         function() {
