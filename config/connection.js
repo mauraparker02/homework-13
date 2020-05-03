@@ -11,7 +11,6 @@ var connection;
     password: "passwordisroot",
     database: "burger_db"
   });
-}
 
 // Throw an error if 
 connection.connect(function(err) {
@@ -23,4 +22,4 @@ connection.connect(function(err) {
 });
 
 // Export connection for ORM 
-module.exports = connection;
+module.exports = connection; 
