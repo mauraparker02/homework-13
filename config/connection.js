@@ -13,7 +13,7 @@ var connection;
   });
 }
 
-// Make connection.
+// Throw an error if 
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
