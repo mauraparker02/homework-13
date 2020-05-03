@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <form class="create-form">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="new-order" NunitoSans-label="Sizing example input"
+                    NunitoSans-describedby="inputGroup-sizing-default" placeholder="Order a burger...">
+                <span><button type="submit" id="add">New Order</button></span>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body" id="header">
+                <h6>Menu</h6>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                {{#each burger}}
+                {{#unless ate}}
+                <p class="burgers">{{this.name}}</p>
+                <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Eat</button>
+                <button type="button" class="btn delete" data-del={{this.id}}>Throw</button>
+                {{/unless}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+<div class="col-md-5">
+    <div class="card">
+        <div class="card-body" id="header">
+                <h6>Delivered</h6>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            {{#each burger}}
+            {{#if ate}}
+            <p class="burgers">{{this.name}}</p>
+            <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Return</button>
+            <button type="button" class="btn delete" data-del={{this.id}}>Throw</button>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="col-md-1">
+</div>
