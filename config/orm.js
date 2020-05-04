@@ -5,7 +5,7 @@ var orm = {
     selectAll: function(cb) {
         connection.query("SELECT * FROM burgers;", function(err, result){
             if (err) {throw err};
-            cb(result); 
+            cb(result); //callback function that should select all the data from the table burgers 
         })
     },
 

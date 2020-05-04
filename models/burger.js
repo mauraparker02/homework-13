@@ -3,19 +3,19 @@ var orm = require("../config/orm.js");
 var burgerModel= {
     
     selectAll: function(cb) {
-        orm.all(function(res) {
-            cb(res);
+        orm.selectAll(function(res) {
+            cb(res); //here should callback the function to get all the databack
         })
     },
 
     createNew: function(name, cb) {
-        orm.create(name, function(res){
+        orm.createNew(name, function(res){
             cb(res);
         })
     },
 
     updateTable: function(change, id, cb) {
-        orm.update(change, id, function(res){
+        orm.updateTable(change, id, function(res){
             cb(res);
         })
     },
