@@ -19,6 +19,7 @@ $(function() {
     // Order filled 
     $(".eat").on("click", function(event) {
         event.preventDefault();
+        console.log("clicked")
         var id = $(this).attr("id");
         var newOrderFilled = $(this).attr("data-ate");
         console.log(newOrderFilled);
