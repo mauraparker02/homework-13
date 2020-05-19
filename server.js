@@ -1,6 +1,8 @@
 var express = require("express");
 var path= require("path")
 
+var exphbs = require("express-handlebars");
+
 var PORT = process.env.PORT || 3000;
 
 var app = express();
@@ -8,9 +10,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var exphbs = require("express-handlebars");
-
-app.use(express.static(path.join(__dirname, 'public')));
+app.use("/public",express.static(path.join(__dirname, 'public'))); 
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
