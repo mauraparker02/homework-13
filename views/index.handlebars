@@ -20,7 +20,7 @@
     <div class="col-md-5">
         <div class="card">
             <div class="card-body" id="header">
-                <h6>Menu</h6>
+                <h6>Ordered</h6>
             </div>
         </div>
         <div class="card">
@@ -28,8 +28,8 @@
                 {{#each burger}}
                 {{#unless ate}}
                 <p class="burgers">{{this.name}}</p>
-                <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Eat</button>
-                <button type="button" class="btn delete" data-del={{this.id}}>Throw</button>
+                <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Serve</button>
+                <button type="button" class="btn delete" data-del={{this.id}}>Cancel Order</button>
                 {{/unless}}
                 {{/each}}
             </div>
@@ -39,7 +39,7 @@
 <div class="col-md-5">
     <div class="card">
         <div class="card-body" id="header">
-                <h6>Delivered</h6>
+                <h6>Served</h6>
         </div>
     </div>
     <div class="card">
@@ -48,7 +48,7 @@
             {{#if ate}}
             <p class="burgers">{{this.name}}</p>
             <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Return</button>
-            <button type="button" class="btn delete" data-del={{this.id}}>Throw</button>
+            <button type="button" class="btn delete" data-del={{this.id}}>Eat</button>
             {{/if}}
             {{/each}}
         </div>

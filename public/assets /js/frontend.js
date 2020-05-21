@@ -4,7 +4,7 @@ $(function() {
         $("#add").on("click", function(event) {
         event.preventDefault();
 
-        var newOrder = $("#new-burger").val().trim();
+        var newOrder = $("#new-burger").val();
 
         $.ajax("/api/create/" + newOrder, {
             type: "POST"
