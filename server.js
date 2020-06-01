@@ -3,7 +3,7 @@ var path= require("path")
 
 var exphbs = require("express-handlebars");
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 var app = express();
 
