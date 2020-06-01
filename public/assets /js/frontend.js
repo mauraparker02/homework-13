@@ -4,8 +4,8 @@ $(function() {
         $("#add").on("click", function(event) {
         event.preventDefault();
 
-        var newOrder = $("#new-burger").val();
-
+        var newOrder = $("#new-order").val();
+        console.log(newOrder)
         $.ajax("/api/create/" + newOrder, {
             type: "POST"
         }).then(
@@ -17,7 +17,7 @@ $(function() {
     });
 
     // Order filled 
-    $(".eat").on("click", function(event) {
+    $(".btn-eat").on("click", function(event) {
         event.preventDefault();
         console.log("clicked")
         var id = $(this).attr("id");
@@ -34,7 +34,7 @@ $(function() {
     });
 
     // Take off filled order 
-    $(".delete").on("click", function(event) {
+    $(".btn-delete").on("click", function(event) {
         event.preventDefault();
         var id = $(this).attr("data-del");
     
