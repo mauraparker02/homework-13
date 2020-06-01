@@ -1,5 +1,14 @@
 
-  p {
+p {
     padding-top: 1rem;
     text-align: center;
+}
+
+.btn-eat {
+    background-color: yellow !important; 
+}
+
+.btn-delete {
+    background-color: green !important;
+
 }

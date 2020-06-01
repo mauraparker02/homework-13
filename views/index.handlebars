@@ -28,8 +28,8 @@
                 {{#each burger}}
                 {{#unless ate}}
                 <p class="burgers">{{this.name}}</p>
-                <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Serve</button>
-                <button type="button" class="btn delete" data-del={{this.id}}>Cancel Order</button>
+                <button type="button" class="btn-eat" id={{this.id}} data-ate={{this.ate}}>Serve</button>
+                <button type="button" class="btn-delete" data-del={{this.id}}>Cancel Order</button>
                 {{/unless}}
                 {{/each}}
             </div>
@@ -47,8 +47,8 @@
             {{#each burger}}
             {{#if ate}}
             <p class="burgers">{{this.name}}</p>
-            <button type="button" class="btn eat" id={{this.id}} data-ate={{this.ate}}>Return</button>
-            <button type="button" class="btn delete" data-del={{this.id}}>Eat</button>
+            <button type="button" class="btn-eat" id={{this.id}} data-ate={{this.ate}}>Return</button>
+            <button type="button" class="btn-delete" data-del={{this.id}}>Eat</button>
             {{/if}}
             {{/each}}
         </div>
